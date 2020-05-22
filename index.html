@@ -1,21 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Thiago Coimbra</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiago Coimbra</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans&family=Nanum+Pen+Script&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5ae011d3b4.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <nav class="menu">
-          <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portifólio</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
-        <h1 class="site-title">Thiago Coimbra</h1>
-        <h2 class="site-subtitle">Gerente de Projetos</h2>
-    </header>
+  <header>
+    <div class="main"></div>
+    <div class="container-button">
+      <i class="fas fa-angle-double-up"></i>
+    </div>
+    <nav class="menu">
+
+      <input type="checkbox" id="bt_menu" class="bt_menu">
+      <label for="bt_menu">&#9776;</label>
+
+      <ul class="dropdown-menu container">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#fotografia">Fotografia</a></li>
+        <li><a href="#aprendizado">Aprendizado</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="titulos">
+      <h1 class="site-title">Thiago Coimbra</h1>
+      <h2 class="site-subtitle">Amante de Fotografia</h2>
+      <h2 class="site-subtitle">Eterno Estudante</h2>
+    </div>
+  </header>
+  <section id="sobre" class="sobre container">
+    <h2>Sobre</h2>
+
+    <div class="caixa-avatar">
+      <figure class="avatar">
+        <img class="img-avatar" src="./img/thiago-coimbra.jpg" alt="Thiago Coimbra">
+      </figure>
+    </div>
+    <p>
+      Formado em Gestão de TI pela Faculdade SENAC - DF em 2010, porém não pude deixar o trabalho da época para
+      iniciar na áre de TI.
+    </p>
+
+    <p>
+      Depois de um logo tempo no mercado financeiro, tento agora, por meio da Alura, rever, aprender e me capacitar pra enfrentar
+      as dificuldades de alguém que não tem a experiência exigida pra iniciar na carreira de TI.
+    </p>
+
+    <p>
+      Sou um amante da fotografia, penso que toda situação tem seu momento mágico e parar um pouco pra aprecisar a natureza e
+      capturar esse momento num click é maravilhoso.
+    </p>
+
+    <p>
+      Só tenho boas coisas pra falar da Alura, sempre inovando e trazendo as melhores aulas pra comunidade. Fico feliz
+      por ter participado da <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>. ;)
+    </p>
+  </section>
+  <section id="fotografia" class="fotografia container">
+    <h2>Fotografia</h2>
+
+    <div class="grid">
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/ponte-jk.jpeg" alt="Ponte JK">
+          </figure>
+          <div class="card-back">
+            <h3>Ponte JK - um dos mais lindos cartões-postais de Brasília - DF.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/flor-cachoeira.JPG" alt=">Flor em uma Cachoeira">
+          </figure>
+          <div class="card-back">
+            <h3>Cachoeira Indaiá - Formosa-GO</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/velas.JPG" alt="Luz de Velas">
+          </figure>
+          <div class="card-back">
+            <h3>Fotografia no escuro à luz de velas.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/baby-lion.JPG" alt="Lion">
+          </figure>
+          <div class="card-back">
+            <h3>Meu filhote, Lion. Parece ser muito fofo, mas é uma ferinha que gosta muito de morder.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/nascer-sol.JPG" alt="Nascer do Sol">
+          </figure>
+          <div class="card-back">
+            <h3>Nascer dos sol - esse é um dos melhor momentos pra fotografar.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/borboleta.JPG" alt="Borboleta">
+          </figure>
+          <div class="card-back">
+            <h3>Uma linda borboleta.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/lua.jpg" alt="Lua">
+          </figure>
+          <div class="card-back">
+            <h3>Nosso satélite natural, a Lua. Do tempo em que eu tinha telescópio.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/mundo-animal.jpg" alt="Ave Comendo Peixe">
+          </figure>
+          <div class="card-back">
+            <h3>Presa e Predador.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/por-do-sol.jpeg" alt="Pôr do Sol">
+          </figure>
+          <div class="card-back">
+            <h3>Pôr dos sol na Praça dos Cristais - esse é o outro melhor momento pra fotografar.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-fotografia" src="./img/sol.JPG" alt="Sol">
+          </figure>
+          <div class="card-back">
+            <h3>Sol - A natureza me encanta.</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="aprendizado" class="aprendizado container">
+    <h2>Aprendizado</h2>
+
+    <nav class="cursos">
+      <ul>
+        <li><a
+            href="https://cursos.alura.com.br/user/thiagoacoimbra/fullCertificate/350d6cdceb9b528371ba2ba9e89566c9">Python</a>
+        </li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">CSS + HTML</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="contato" class="contato container">
+    <h2>Contato</h2>
+
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/thiagoacoimbra">
+        <i class="fab fa-github-square"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/thiagoacoimbra">
+        <i class="fab fa-twitter-square"></i>
+        <a target="_blank" href="https://www.linkedin.com/in/thiagoacoimbra/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/thiagoacoimbra/">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+        <a target="_blank" href="mailto:thiagoacoimbra@hotmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+  </section>
+
+  <script>
+    document.querySelector('.main').style.display = 'none';
+    document.querySelector('.main').classList.add('spinner');
+
+    setTimeout(() => {
+      document.querySelector('.main').classList.remove('spinner');
+      document.querySelector('.main').style.display = 'block';
+    }, 4000);
+  </script>
+
+  <script type="text/javascript" src="jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.fa-angle-double-up').fadeIn();
+          $('.container-button').css({
+            opacity: function () {
+              var opacity = 1;
+              //TODO:
+              //Set opacity to a higer value whilst user scrolls
+              return opacity;
+            }
+          });
+        } else {
+          $('.fa-angle-double-up').fadeOut();
+        }
+      });
+
+      $('.fa-angle-double-up').click(function () {
+        $('body, html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+
+  </script>
 </body>
+
 </html>

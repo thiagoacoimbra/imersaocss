@@ -1,37 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://image.freepik.com/fotos-gratis/conceito-textured-pintado-colorido-concreto-do-papel-de-parede-da-parede_53876-31799.jpg');
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
     background-size: 100vw 100vh;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
   }
-  
-  .menu{
-    background-color: white;
+
+  /* se a tela tiver pelo menos x tamanho vai carregar os estilos*/
+ 
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: rgb(4, 41, 77);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu .dropdown-menu {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  transition: 0.7s all;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color, 1s;
+}
+
+.menu a:hover,
+.menu a:active {
+  background-color: whitesmoke;
+  color: rgb(4, 41, 77);
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label[for="bt_menu"] {
+  padding-left: 15px;
+  color: whitesmoke;
+  text-align: left;
+  font-size: 35px;
+  cursor: pointer;
+  display: none;
+  /*width: 50px;
+  height: 50px;*/
+}
+
+#bt_menu {
+  display: none;
+}
+
+@media (max-width: 319px) {
+  label[for="bt_menu"] {
+    display: block;
+    font-size: 27px;  
   }
-  
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
+
+  .menu .dropdown-menu {
+    display: none;    
+    background-color: rgb(4, 41, 77);;
+    z-index: 1;
+    
   }
-  
-  .menu li {
-    list-style: none;
+
+  .menu:hover .dropdown-menu,
+  .menu:active .dropdown-menu {
+    display: block;
   }
-  
-  a {
-    color: teal;
-    text-decoration: none;
+}
+
+.titulos {
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  0% {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
   }
-  
-  a:hover {
-    text-decoration: underline;
+  100% {
+    tranform: scale(1) translateY(0);
+    opacity: 1;
   }
-  
-  .site-subtitle,
-  .site-title {
-    color: whitesmoke;
+}
+
+.site-subtitle,
+.site-title {
+  color: black;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 3.4em;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.site-subtitle {
+  font-size: 1.4em;
+  font-style: italic;
+  font-family: 'Patrick Hand', cursive;
+  line-height: 1.2em;
+}
+
+.sobre,
+.fotografia,
+.aprendizado,
+.contato {
+  padding-left: .3em;
+  padding-right: .3em;
+  padding-top: 3em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.fotografia h2,
+.aprendizado h2,
+.contato h2 {
+  font-family: 'Nanum Pen Script', cursive;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.sobre p {
+  font-family: 'Patrick Hand', cursive;
+  color: rgb(4, 41, 77);
+  text-indent: 2em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: rgb(4, 41, 77);
+  text-decoration: underline;
+}
+
+.sobre a:hover,
+.sobre a:active {
+  background-color: teal;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 1em;
+}
+
+.img-avatar{
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  height: 240px;
+  width: auto;
+}
+
+@media (max-width: 432px) {
+  .sobre .avatar {
+    float: none;
+    margin-left: 0;
+  }
+  .caixa-avatar{
     text-align: center;
   }
-  
-  .site-subtitle {
-    font-style: italic;
+  .img-avatar {
+    text-align: center;
+    clip-path: polygon(50% 20%, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+    height: 200px;
+    width: auto;
   }
+}
+
+.fotografia .grid {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+    align-content: center;
+}
+
+h3 {
+  font-size: 16px;
+  font-style: italic;
+  text-align: justify;
+}
+
+@media (min-width: 319px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 560px) {
+  body {
+    font-size: 18px;
+  }
+  .fotografia .grid {
+    grid-template-columns: repeat(2,240px);
+
+  }
+}
+
+@media (min-width: 880px) {
+  .fotografia .grid {
+    grid-template-columns: repeat(3,240px);
+
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+  .fotografia .grid {
+    grid-template-columns: repeat(4,240px);
+
+  }
+}
+
+/*.img-fotografia:hover {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}*/
+
+.flip-card {
+  height: 160px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card,
+.flip-card:active .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  width: 240px;
+  height: 160px;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  height: 160px;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+.fotografia figure { 
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+}
+
+.img-fotografia {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom; /*Propriedade mto boa*/
+  border-radius: 8%;
+  transition: transform 500ms;
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: black;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  height: 48px;
+  width: 48px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: whitesmoke;
+  animation: spinner 0.7s ease infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.fa-angle-double-up {
+  color: black;
+}
